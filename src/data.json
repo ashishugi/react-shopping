@@ -1,0 +1,84 @@
+{
+    "products": [{
+            "_id": "fruit 1",
+            "title": "fruit 1",
+            "image": "/images/fruit1.jpg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress2",
+            "title": "fruit 2",
+            "image": "./images/fruit2.jpg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress3",
+            "title": "fruit 3",
+            "image": "./images/fruit3.jpg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress4",
+            "title": "fruit 4",
+            "image": "./images/fruit4.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress5",
+            "title": "fruit 5",
+            "image": "./images/fruit5.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress6",
+            "title": "fruit 6",
+            "image": "./images/fruit6.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress6",
+            "title": "fruit 7",
+            "image": "./images/fruit6.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress6",
+            "title": "fruit 8",
+            "image": "./images/fruit6.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        },
+        {
+            "_id": "dress6",
+            "title": "fruit 9",
+            "image": "./images/fruit6.jpeg",
+            "description": "about the dress 1",
+            "price": 19,
+            "availableSizes": ["XL", "XXL"]
+
+        }
+    ]
+}
