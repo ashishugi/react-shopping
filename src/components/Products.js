@@ -1,28 +1,38 @@
 import React from "react";
-import Card from 'react-bootstrap/Card';
-import {Button} from "../style";
+// import Card from 'react-bootstrap/Card';
+import {Button,Card,Img,ProductWrapper} from "../style";
+import {Row,Col,Container} from 'react-bootstrap';
 
 function Products(props){
     return (
-        
-        <div>
-            <ul className="products">
-                {props.products.map((product)=>(
-                    <Card style={{margin:"2%",border:"0px"}} key={product._id}>
-                            <img variant="top" style={{height:"200px" , width:"200px",objectFit:"cover"}}
-                             src={product.image} alt={product.title}/>
-                            
-                        <Card.Body>
-                            <Card.Title>{product.title}</Card.Title>
-                            <Card.Text>
-                                    <div>{product.price}</div>
-                                    <Button variant="primary" >Add to Cart</Button>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                ))}
-            </ul>
-        </div>
+        <ProductWrapper>
+            <Container>
+                <Row className="products">
+                    {props.products.map((product)=>(
+                        <Col md={3} sm={12}>
+                            <Card style={{margin:"2%",border:"0px"}} key={product._id}>
+                                    <Img variant="top" 
+                                    src={product.image} alt={product.title}/>
+                                    
+                                <div style={{textAlign:"center"}}>
+                                    <div>{product.title}</div>
+                                    <div>
+                                        <Row style={{padding:"13% 0", textAlign:"center"}}>
+                                            <Col md={4} style={{ fontFamily: "Lucida Console, Courier, monospace"}} >
+                                              ${product.price}
+                                            </Col>
+                                            <Col md={8} style={{paddingLeft:"2%"}}>
+                                                <Button>Add to Cart</Button>
+                                            </Col>
+                                        </Row>
+                                    </div>
+                                </div>
+                            </Card>
+                        </Col>
+                    ))}
+                </Row>
+            </Container>
+        </ProductWrapper>
     );
 }
 

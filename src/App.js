@@ -2,9 +2,10 @@ import React from 'react';
 
 import {Wrapper,Header,Main,Footer,Content,MainContent,SideBar} from "./style";
 import data from "./data.json";
-import {Row,Col} from 'react-bootstrap';
 import Products from "./components/Products";
 import styles from "./index.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Row,Col,Container} from 'react-bootstrap';
 
 
 class App extends React.Component {
@@ -23,14 +24,16 @@ class App extends React.Component {
             <a style={{color:"white", textDecoration:"none"}} href="/">React Shopping Cart</a>
           </Header>
           <Main>
-            <Content>
-              <MainContent>
-                <Products products={this.state.products}/>
-              </MainContent>
-              <SideBar>
-                this
-              </SideBar>            
-            </Content>
+            <div>
+              <Row>
+                <Col md={9} sm={12}>
+                        <Products products={this.state.products}/>
+                </Col>
+                <Col md={3} sm={12}>
+                        this
+                </Col>
+              </Row>
+            </div>
           </Main>
           <Footer>
             All right is reserved.
