@@ -4,8 +4,8 @@
             "title": "fruit 1",
             "image": "/images/fruit1.jpg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 12,
+            "availableSizes": ["XS", "S"]
 
         },
         {
@@ -13,8 +13,8 @@
             "title": "fruit 2",
             "image": "./images/fruit2.jpg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 123,
+            "availableSizes": ["XS", "S"]
 
         },
         {
@@ -22,8 +22,8 @@
             "title": "fruit 3",
             "image": "./images/fruit3.jpg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 1123,
+            "availableSizes": ["S", "M"]
 
         },
         {
@@ -31,8 +31,8 @@
             "title": "fruit 4",
             "image": "./images/fruit4.jpeg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 10,
+            "availableSizes": ["S", "M"]
 
         },
         {
@@ -40,8 +40,8 @@
             "title": "fruit 5",
             "image": "./images/fruit5.jpeg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 219,
+            "availableSizes": ["M", "L"]
 
         },
         {
@@ -49,8 +49,8 @@
             "title": "fruit 6",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 1239,
+            "availableSizes": ["M", "L"]
 
         },
         {
@@ -58,8 +58,8 @@
             "title": "fruit 7",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 192,
+            "availableSizes": ["L", "XL"]
 
         },
         {
@@ -67,8 +67,8 @@
             "title": "fruit 8",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
-            "price": 19,
-            "availableSizes": ["XL", "XXL"]
+            "price": 11,
+            "availableSizes": ["L", "XL"]
 
         },
         {
@@ -76,7 +76,7 @@
             "title": "fruit 9",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
-            "price": 19,
+            "price": 43,
             "availableSizes": ["XL", "XXL"]
 
         }

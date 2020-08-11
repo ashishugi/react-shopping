@@ -67,10 +67,29 @@ const Card = styled.div `
 
 `
 const ProductWrapper = styled.div `
-    padding:7% 3%;
+    padding:4% 3%;
+`
+const FilterWrapper = styled.div `
+    padding:1% 3%;
+`
+const FilterResult = styled.div `
+    margin-left:2%;
+    margin-right:2%;
+`
+const FilterSort = styled.div `
+    margin-left:2%;
+    margin-right:2%;
+`
+const FilterSize = styled.div `
+    margin-left:2%;
+    margin-right:2%;
 `
 export {
     Wrapper,
+    FilterResult,
+    FilterSort,
+    FilterSize,
+    FilterWrapper,
     ProductWrapper,
     Card,
     Img,
