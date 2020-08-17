@@ -54,7 +54,7 @@
 
         },
         {
-            "_id": "dress6",
+            "_id": "dress7",
             "title": "fruit 7",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
@@ -63,7 +63,7 @@
 
         },
         {
-            "_id": "dress6",
+            "_id": "dress8",
             "title": "fruit 8",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",
@@ -72,7 +72,7 @@
 
         },
         {
-            "_id": "dress6",
+            "_id": "dress9",
             "title": "fruit 9",
             "image": "./images/fruit6.jpeg",
             "description": "about the dress 1",

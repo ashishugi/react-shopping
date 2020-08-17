@@ -7,15 +7,36 @@ import styles from "./index.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col,Container} from 'react-bootstrap';
 import Filter from "./components/Filter";
-
+import Cart from "./components/Cart";
 class App extends React.Component {
   constructor(){
     super();
     this.state = {
       products:data.products,
+      cartItems:[],
       size:"",
       sort:"",
     }
+  }
+  removeFromCart = (product) =>{
+    const cartItems = this.state.cartItems.slice();
+    this.setState({
+      cartItems : cartItems.filter(x => x._id != product._id),
+    })
+  }
+  addToCart = (product)=>{
+    const cartItems = this.state.cartItems.slice(); // extract all the elements from the array .
+    let alreadyInCart = false;
+    cartItems.forEach(Item =>{
+      if(Item._id === product._id){
+        Item.count++;
+        alreadyInCart = true;
+      }
+    })
+    if(!alreadyInCart){
+      cartItems.push({...product,count:1})
+    }
+    this.setState({cartItems});
   }
   sortProducts=(event)=>{
     const sort = event.target.value;
@@ -56,10 +77,13 @@ class App extends React.Component {
             <div>
               <Row>
                 <Col md={9} sm={12}>
-                        <Products products={this.state.products}/>
+                        <Products products={this.state.products} 
+                        addToCart={this.addToCart}/>
                 </Col>
                 <Col md={3} sm={12}>
-                        this
+                        <Cart cartItems={this.state.cartItems} 
+                          removeFromCart={this.removeFromCart}
+                        />
                 </Col>
               </Row>
             </div>

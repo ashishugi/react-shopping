@@ -22,7 +22,7 @@ function Products(props){
                                               ${product.price}
                                             </Col>
                                             <Col md={8} style={{paddingLeft:"2%"}}>
-                                                <Button>Add to Cart</Button>
+                                                <Button onClick={()=> props.addToCart(product)}>Add to Cart</Button>
                                             </Col>
                                         </Row>
                                     </div>

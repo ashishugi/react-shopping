@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 
 const Wrapper = styled.div `
+    
 `
 const Header = styled.header `
     background-color:#203040;
@@ -12,6 +13,7 @@ const Header = styled.header `
 const Main = styled.main `
     height:100%;
     width:100%;
+    padding:1%;
 `
 const Footer = styled.footer `
     background-color:#203040;
@@ -84,7 +86,27 @@ const FilterSize = styled.div `
     margin-left:2%;
     margin-right:2%;
 `
+const CartHeader = styled.div `
+    border-bottom:.1rem #c0c0c0 solid;
+    flex-wrap:wrap-reverse;
+`
+const CartWrapper = styled.div `
+    padding-top:5%;
+`
+const CheckOutButton = styled.button `
+    background-color:blue;
+    color:white;
+    border:0px;
+    padding:10% 11%;
+    font-weight:700;
+    &:hover{
+        background-color:orange;
+    }
+`
 export {
+    CheckOutButton,
+    CartWrapper,
+    CartHeader,
     Wrapper,
     FilterResult,
     FilterSort,
