@@ -1,4 +1,7 @@
 import React from "react";
+
+
+import Fade from "react-reveal";
 import {Button,Row,Col} from 'react-bootstrap';
 import {CartHeader,CartWrapper,CheckOutButton} from "../style";
 import Form from 'react-bootstrap/Form'
@@ -38,24 +41,26 @@ export default class Cart extends React.Component{
                         }
                         <div>
                             <CartWrapper>
-                                <ul>
-                                    {cartItems.map(item => (
-                                            <Row key={item._id}>
-                                                <Col >
-                                                    <img style={{maxWidth:"100%",maxHeight:"100px"}} src={item.image} alt={item.title}/>
-                                                </Col>
-                                                <Col style={{textAlign:"right"}} >
-                                                    {item.title}
-                                                    <div>
-                                                    $ {item.price} <strong>x</strong> {item.count}{ "   "}
-                                                        <Button variant="outline-dark" onClick={()=>this.props.removeFromCart(item)}>
-                                                            Remove
-                                                        </Button>
-                                                    </div>
-                                                </Col>
-                                            </Row>
-                                    ))}
-                                </ul>
+                                <Fade left cascade>
+                                        <ul>
+                                            {cartItems.map(item => (
+                                                    <Row key={item._id}>
+                                                        <Col >
+                                                            <img style={{maxWidth:"100%",maxHeight:"100px"}} src={item.image} alt={item.title}/>
+                                                        </Col>
+                                                        <Col style={{textAlign:"right"}} >
+                                                            {item.title}
+                                                            <div>
+                                                            $ {item.price} <strong>x</strong> {item.count}{ "   "}
+                                                                <Button variant="outline-dark" onClick={()=>this.props.removeFromCart(item)}>
+                                                                    Remove
+                                                                </Button>
+                                                            </div>
+                                                        </Col>
+                                                    </Row>
+                                            ))}
+                                        </ul>
+                                </Fade>
                             </CartWrapper>
                         </div>
                     {cartItems.length === 0?""
@@ -73,46 +78,48 @@ export default class Cart extends React.Component{
                     }
                     </div>
                     {this.state.showCheckOut && (
-                        <div style={{paddingTop:"10%"}}>
-                            <Form onSubmit={this.createOrder} style={{width:"100%"}}>
-                                <ul style={{listStyleType:"none"}}>
-                                    <li>
-                                        <label>Email</label><br/>
-                                        <input 
-                                        name="email"
-                                        type="email" 
-                                        placeholder="youremail@"
-                                        required 
-                                        onChange={this.handleInput}
-                                        />
-                                    </li>
-                                    <li>
-                                        <label>Name</label><br/>
-                                        <input 
-                                        name="name"
-                                        type="text" 
-                                        placeholder="name"
-                                        required 
-                                        onChange={this.handleInput}
-                                        />
-                                    </li>
-                                    <li>
-                                        <label>Address</label><br/>
-                                        <input 
-                                        name="address"
-                                        type="text" 
-                                        placeholder="address"
-                                        required 
-                                        onChange={this.handleInput}
-                                        />
-                                    </li>
-                                    <li>
-                                    <br/><br/>
-                                        <Button style={{backgroundColor:"blue"}} type="submit">Check Out</Button>
-                                    </li>
-                                </ul>
-                            </Form>
-                        </div>
+                        <Fade right cascade>
+                                <div style={{paddingTop:"10%"}}>
+                                    <Form onSubmit={this.createOrder} style={{width:"100%"}}>
+                                        <ul style={{listStyleType:"none",padding:"0",width:"100%"}}>
+                                            <li style={{width:"100%"}}>
+                                                <label>Email</label><br/>
+                                                <input style={{width:"100%"}}   
+                                                name="email"
+                                                type="email" 
+                                                placeholder=" youremail@"
+                                                required 
+                                                onChange={this.handleInput}
+                                                />
+                                            </li>
+                                            <li>
+                                                <label >Name</label><br/>
+                                                <input style={{width:"100%"}} 
+                                                name="name"
+                                                type="text" 
+                                                placeholder=" name"
+                                                required 
+                                                onChange={this.handleInput}
+                                                />
+                                            </li>
+                                            <li>
+                                                <label>Address</label><br/>
+                                                <input style={{width:"100%"}}
+                                                name="address"
+                                                type="text" 
+                                                placeholder=" address"
+                                                required 
+                                                onChange={this.handleInput}
+                                                />
+                                            </li>
+                                            <li>
+                                            <br/>
+                                                <Button style={{backgroundColor:"blue"}} type="submit">Check Out</Button>
+                                            </li>
+                                        </ul>
+                                    </Form>
+                                </div>
+                        </Fade>
                     )}
                 </div>
             );

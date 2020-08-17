@@ -70,6 +70,7 @@ const Card = styled.div `
 `
 const ProductWrapper = styled.div `
     padding:4% 3%;
+   
 `
 const FilterWrapper = styled.div `
     padding:1% 3%;
